@@ -1,3 +1,8 @@
+#!/bin/bash -x
+
+version=$(git rev-parse HEAD 2>/dev/null | cut -c 1-7)
+
+cat <<EOF
 {
   "id": "/letsencrypt-dcos",
   "cpus": 0.05,
@@ -11,7 +16,7 @@
       "mode": "RW"
     }],
     "docker": {
-      "image": "brentley/letsencrypt-dcos",
+      "image": "brentley/letsencrypt-dcos:$version",
       "network": "BRIDGE",
       "portMappings": [{
         "containerPort": 80,
@@ -34,3 +39,4 @@
     "HAPROXY_GROUP": "external"
   }
 }
+EOF
