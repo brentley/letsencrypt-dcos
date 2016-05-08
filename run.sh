@@ -19,7 +19,7 @@ echo "DOMAIN_ARGS: ${DOMAIN_ARGS}"
 echo "DOMAIN_FIRST: ${DOMAIN_FIRST}"
 
 echo "Running letsencrypt-auto to generate initial signed cert"
-./letsencrypt-auto certonly --staging --standalone --standalone-supported-challenges http-01 \
+./letsencrypt-auto certonly --debug --verbose --staging --standalone --standalone-supported-challenges http-01 \
   $DOMAIN_ARGS --email $SSL_EMAIL --agree-tos --non-interactive --no-redirect \
   --rsa-key-size 4096
 
