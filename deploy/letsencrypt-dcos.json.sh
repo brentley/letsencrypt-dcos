@@ -30,11 +30,11 @@ cat <<EOF
     "MARATHON_URL": "http://master.mesos:8080",
     "MARATHON_LB_ID": "marathon-lb",
     "SSL_EMAIL": "blangston@cloudpassage.com",
-    "SSL_DOMAINS": "global-cphalo.cphalo.com,api-cphalo.cphalo.com,grid-cphalo.cphalo.com,portal-cphalo.cphalo.com,outyet-cphalo.cphalo.com"
+    "SSL_DOMAINS": "api-cphalo.cphalo.com,grid-cphalo.cphalo.com,portal-cphalo.cphalo.com,outyet-cphalo.cphalo.com"
 
   },
   "labels": {
-    "HAPROXY_0_VHOST": "global-cphalo.cphalo.com,api-cphalo.cphalo.com,grid-cphalo.cphalo.com,portal-cphalo.cphalo.com,outyet-cphalo.cphalo.com",
+    "HAPROXY_0_VHOST": "api-cphalo.cphalo.com,grid-cphalo.cphalo.com,portal-cphalo.cphalo.com,outyet-cphalo.cphalo.com",
     "HAPROXY_0_PATH": "/.well-known/acme-challenge",
     "HAPROXY_GROUP": "external"
   }
