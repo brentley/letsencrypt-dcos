@@ -33,6 +33,14 @@ cat <<EOF
     "SSL_DOMAINS": "api-cphalo.cphalo.com,grid-cphalo.cphalo.com,portal-cphalo.cphalo.com,outyet-cphalo.cphalo.com"
 
   },
+  "healthChecks": [{
+     "protocol": "COMMAND",
+     "command": { "value": "/bin/true" },
+     "gracePeriodSeconds": 300,
+     "intervalSeconds": 60,
+     "timeoutSeconds": 20,
+     "maxConsecutiveFailures": 3
+  }],
   "labels": {
     "HAPROXY_0_VHOST": "api-cphalo.cphalo.com,grid-cphalo.cphalo.com,portal-cphalo.cphalo.com,outyet-cphalo.cphalo.com",
     "HAPROXY_0_PATH": "/.well-known/acme-challenge",
